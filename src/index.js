@@ -13,9 +13,9 @@ import TestDisplay from "./components/TestDisplay";
 import Test from "./components/Test";
 
 ReactDOM.render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <BrowserRouter basename="/test-manager">
     <Routes>
-      <Route path="/" element={<App />}>
+      <Route exact path="/" element={<App />}>
         <Route path="add" element={<Add />} />
         <Route path="search" element={<SearchPanel />}>
           <Route path=":testId" element={<TestDisplay />} />
