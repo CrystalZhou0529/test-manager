@@ -13,7 +13,7 @@ import TestDisplay from "./components/TestDisplay";
 import Test from "./components/Test";
 
 ReactDOM.render(
-  <BrowserRouter basename="process.env.PUBLIC_URL">
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="add" element={<Add />} />
