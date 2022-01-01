@@ -13,7 +13,7 @@ import TestDisplay from "./components/TestDisplay";
 import Test from "./components/Test";
 
 ReactDOM.render(
-  <BrowserRouter basename="/test-manager">
+  <BrowserRouter basename={window.location.pathname || ''}>
     <Routes>
       <Route exact path="/" element={<App />}>
         <Route path="add" element={<Add />} />
