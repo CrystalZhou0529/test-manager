@@ -7,6 +7,7 @@ class Add extends Component {
   state = {
     count: 4,
     idInput: "",
+    nameInput: "",
     steps: [
       {
         id: 1,
@@ -47,6 +48,7 @@ class Add extends Component {
             onDelete={this.handleDelete}
             onAddStep={this.handleAdd}
             onIDChange={this.handleIDInputChange}
+            onNameChange={this.handleNameInputChange}
             onSubmit={this.handleSubmit}
           />
         </div>
@@ -99,19 +101,24 @@ class Add extends Component {
     this.setState({ steps: steps });
   };
 
-  handleSubmit = () => {
+  handleSubmit = (layer) => {
     let steps = this.state.steps.filter((step) => step.page !== "");
     if (steps && this.state.idInput) {
       let test = {
         id: this.state.idInput,
+        name: this.state.nameInput,
         steps: steps,
       };
-      addDB(test);
+      addDB(test, layer);
     }
   };
 
   handleIDInputChange = (e) => {
     this.setState({ idInput: e.target.value });
+  };
+
+  handleNameInputChange = (e) => {
+    this.setState({ nameInput: e.target.value });
   };
 }
 

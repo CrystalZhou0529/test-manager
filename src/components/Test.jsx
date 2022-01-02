@@ -35,15 +35,14 @@ export default function Test() {
             </tbody>
           </table>
         </div>
-        <div className="col col-6">
-          <StepVisualizer
-            value={{
-              dropdownInfo: getDropdown(),
-              steps: steps,
-            }}
-          />
-        </div>
+        <div className="col col-6">aaa</div>
       </div>
+      <StepVisualizer
+        value={{
+          dropdownInfo: getDropdown(),
+          steps: steps,
+        }}
+      />
     </div>
   );
 }

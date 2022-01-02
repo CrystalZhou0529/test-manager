@@ -4,7 +4,9 @@ class IDInput extends React.Component {
   render() {
     return (
       <div>
-        <label htmlFor="test_id">Test Case ID </label>
+        <label htmlFor="test_id">
+          <strong>Test Case ID </strong>
+        </label>
         <input
           className="m-2"
           id="test_id"

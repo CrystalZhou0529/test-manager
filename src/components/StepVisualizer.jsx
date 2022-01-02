@@ -5,7 +5,7 @@ import { getDropdown } from "../data";
 function StepVisualizer(props) {
   const dropdown = getDropdown();
   return (
-    <div>
+    <div className="row">
       {dropdown
         .filter((page) => page.name !== "")
         .map((page, index) => (

@@ -4,7 +4,7 @@ class PageVisualizer extends React.Component {
   render() {
     const pageName = this.props.stepItem.name;
     return (
-      <div className="page">
+      <div className="page col col-3">
         <span>{this.props.stepItem.name}</span>
         {this.props.stepItem.elements.map((element, index) => {
           let classes = "page-element ";

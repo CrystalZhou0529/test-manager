@@ -1,14 +1,20 @@
 import React, { Component } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Step from "./add/Step";
 import IDInput from "./IDInput";
+import NameInput from "./add/NameInput";
 
 function AddPanel(props) {
   let navigate = useNavigate();
+  let location = useLocation();
+  const layer = location.state.layer;
   return (
     <div>
-      <h2>Add Test Case</h2>
       <IDInput id={props.value.idInput} onIDChange={props.onIDChange} />
+      <NameInput
+        name={props.value.nameInput}
+        onNameChange={props.onNameChange}
+      />
       {props.value.steps.map((step, index) => (
         <Step
           key={step.id}
@@ -34,7 +40,7 @@ function AddPanel(props) {
       <button
         className="btn btn-dark m-2"
         onClick={() => {
-          props.onSubmit();
+          props.onSubmit(layer);
           navigate("/");
         }}
       >
