@@ -1,0 +1,77 @@
+.element-dropdown {
+  width: 150px;
+}
+
+.page-dropdown {
+  width: 150px;
+}
+
+.page {
+  width: 400px;
+  height: 240px;
+  border-radius: 1px;
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.page-element {
+  border: 2px solid grey;
+  border-radius: 5px;
+  margin: 2px 5px;
+  padding: 2px;
+}
+
+#logo {
+  height: 50px;
+  cursor: pointer;
+}
+
+.title {
+  padding-left: 10px;
+  color: white;
+  height: 50px;
+  background-color: #482967;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin: 0;
+}
+
+.nav-item {
+  display: block;
+  margin: 1rem;
+}
+
+.sidebar {
+  width: 8vw;
+  height: 100vh;
+  border-right: 1px #706b9b solid;
+  padding-left: 20px !important;
+}
+
+.tests-table tbody tr:hover {
+  background-color: #f0f0f0;
+  color: #342f6a;
+}
+
+.sidebar-item {
+  white-space: pre;
+}
+
+.sidebar-click[name="folder-title"]:hover {
+  color: white;
+  background-color: #a08eb2;
+}
+
+.sidebar-click[name~="-btn"]:hover {
+  color: #a08eb2;
+}
+
+.sidebar-right-icon {
+  float: right !important;
+  margin: 0 3px;
+}
+
+.sidebar-click {
+  cursor: pointer;
+}
