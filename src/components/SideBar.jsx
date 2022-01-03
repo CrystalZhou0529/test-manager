@@ -69,8 +69,13 @@ function generateSideBar(structure, layers, setStructure, navigate) {
             }
             return (
               <div
-                className={"sidebar-item sidebar-test " + collapse}
+                className={
+                  "sidebar-item sidebar-test sidebar-click " + collapse
+                }
                 key={index}
+                onClick={() => {
+                  navigate(`/tc/${test}`);
+                }}
               >
                 <span>{indent.repeat(layer + 1)}</span>
                 <i className="bi bi-card-list"></i>

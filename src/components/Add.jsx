@@ -38,24 +38,27 @@ class Add extends Component {
 
   render() {
     return (
-      <div className="row">
-        <div className="col-6">
-          <AddPanel
-            value={this.state}
-            onPageSelect={this.handlePageSelect}
-            onElementSelect={this.handleElementSelect}
-            onOperationSelect={this.handleOperationSelect}
-            onDelete={this.handleDelete}
-            onAddStep={this.handleAdd}
-            onIDChange={this.handleIDInputChange}
-            onNameChange={this.handleNameInputChange}
-            onSubmit={this.handleSubmit}
-          />
+      <React.Fragment>
+        <div className="row m-2">
+          <div className="col-6">
+            <AddPanel
+              value={this.state}
+              onPageSelect={this.handlePageSelect}
+              onElementSelect={this.handleElementSelect}
+              onOperationSelect={this.handleOperationSelect}
+              onDelete={this.handleDelete}
+              onAddStep={this.handleAdd}
+              onIDChange={this.handleIDInputChange}
+              onNameChange={this.handleNameInputChange}
+              onSubmit={this.handleSubmit}
+            />
+          </div>
+          <div className="col-6">aaa</div>
         </div>
-        <div className="col-6">
+        <div className="row m-2">
           <StepVisualizer value={this.state} />
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 
