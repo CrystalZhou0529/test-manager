@@ -7,7 +7,11 @@ import NameInput from "./add/NameInput";
 function AddPanel(props) {
   let navigate = useNavigate();
   let location = useLocation();
+  if (!location.state.layer) {
+    navigate("/");
+  }
   const layer = location.state.layer;
+
   return (
     <div>
       <IDInput id={props.value.idInput} onIDChange={props.onIDChange} />
@@ -28,6 +32,9 @@ function AddPanel(props) {
           }}
           onOperationSelect={(e) => {
             props.onOperationSelect(e, step.id);
+          }}
+          onTransSelect={(e) => {
+            props.onTransSelect(e, step.id);
           }}
           onDelete={() => {
             props.onDelete(step.id);

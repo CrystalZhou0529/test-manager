@@ -14,24 +14,28 @@ class Add extends Component {
         page: "",
         element: "",
         operation: "",
+        transition: null,
       },
       {
         id: 2,
         page: "",
         element: "",
         operation: "",
+        transition: null,
       },
       {
         id: 3,
         page: "",
         element: "",
         operation: "",
+        transition: null,
       },
       {
         id: 4,
         page: "",
         element: "",
         operation: "",
+        transition: null,
       },
     ],
   };
@@ -40,12 +44,13 @@ class Add extends Component {
     return (
       <React.Fragment>
         <div className="row m-2">
-          <div className="col-6">
+          <div className="col-12">
             <AddPanel
               value={this.state}
               onPageSelect={this.handlePageSelect}
               onElementSelect={this.handleElementSelect}
               onOperationSelect={this.handleOperationSelect}
+              onTransSelect={this.handleTransSelect}
               onDelete={this.handleDelete}
               onAddStep={this.handleAdd}
               onIDChange={this.handleIDInputChange}
@@ -53,7 +58,6 @@ class Add extends Component {
               onSubmit={this.handleSubmit}
             />
           </div>
-          <div className="col-6">aaa</div>
         </div>
         <div className="row m-2">
           <StepVisualizer value={this.state} />
@@ -80,6 +84,12 @@ class Add extends Component {
   handleOperationSelect = (e, id) => {
     let steps = [...this.state.steps];
     steps[id - 1].operation = e.target.value;
+    this.setState({ steps: steps });
+  };
+
+  handleTransSelect = (e, id) => {
+    let steps = [...this.state.steps];
+    steps[id - 1].transition = e.target.value;
     this.setState({ steps: steps });
   };
 

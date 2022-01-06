@@ -30,6 +30,7 @@ function generateSideBar(structure, layers, setStructure, navigate) {
           onClick={() => {
             toggleStructureCollapse(layers);
             setStructure({ ...getStructure() });
+            navigate("/", { state: { from: layers } });
           }}
         >
           <span>{indent.repeat(layer)}</span>

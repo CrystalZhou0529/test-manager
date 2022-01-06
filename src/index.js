@@ -11,17 +11,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SearchPanel from "./components/SearchPanel";
 import TestDisplay from "./components/TestDisplay";
 import Test from "./components/Test";
+import FolderSummary from "./components/FolderSummary";
 
 ReactDOM.render(
   <BrowserRouter basename={window.location.pathname || ""}>
     <Routes>
       <Route exact path="/" element={<App />}>
-        <Route path="add" element={<Add />} />
-        <Route path="search" element={<SearchPanel />}>
-          <Route path=":testId" element={<TestDisplay />} />
+        <Route path="/add" element={<Add />} />
+        <Route path="/search" element={<SearchPanel />}>
+          <Route path="/search/:testId" element={<TestDisplay />} />
           <Route index element={<TestDisplay />} />
         </Route>
-        <Route path="tc/:testId" element={<Test />} />
+        <Route path="/tc/:testId" element={<Test />} />
+        <Route index element={<FolderSummary />} />
       </Route>
     </Routes>
   </BrowserRouter>,

@@ -1,9 +1,13 @@
 .element-dropdown {
-  width: 150px;
+  width: 180px;
 }
 
 .page-dropdown {
-  width: 150px;
+  width: 180px;
+}
+
+.trans-dropdown {
+  width: 250px;
 }
 
 .page {
@@ -74,4 +78,13 @@
 
 .sidebar-click {
   cursor: pointer;
+}
+
+.trans-item {
+  height: 40px;
+  align-items: center;
+}
+
+.trans-list {
+  padding-top: 92px;
 }
