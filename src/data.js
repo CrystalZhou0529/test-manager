@@ -111,6 +111,7 @@ let db = [
         id: 3,
         page: "Purchase Confirmation Page",
         element: "Back Button",
+        operation: "Clicked",
         transition: 0,
       },
       {
@@ -137,7 +138,7 @@ let db = [
       {
         id: 7,
         page: "Purchase Confirmation Page",
-        element: "Accept Button",
+        element: "Confirm Purchase Button",
         operation: "Clicked",
         transition: 2,
       },

@@ -88,3 +88,31 @@
 .trans-list {
   padding-top: 92px;
 }
+
+.summary-row {
+  height: 15vh;
+  min-height: 90px;
+  margin: 1rem !important;
+  padding: 1rem;
+  border: 1px #706b9b dashed;
+}
+
+.summary-col {
+  border-right: 1px #a08eb2 dashed;
+}
+
+.summary-col h1 {
+  float: right;
+  padding-right: 3rem;
+  padding-top: 1rem;
+}
+
+.summary-col span {
+  font-size: large;
+  font-weight: 800;
+}
+
+.table-row {
+  margin: 1rem !important;
+  padding: 1rem;
+}
